@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Fraunces:wght@700;900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // 10px / 16px = 0.625 = 62.5%
+    font-size: 62.5%;
+}
+html, body {
+    height: 100%;
+}
+body {
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+// mixins
+@mixin  flex-display() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin  min-width($threshold) {
+    @media screen and (min-width: $threshold) {
+        @content;
+    }
+}
+
+ul {
+    list-style: none;
+}
+img:not(.logo-img, .profile-img) {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: $secondary-font;
+    font-weight: 900;
+}
+
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+

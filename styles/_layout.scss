@@ -1,0 +1,7 @@
+// flex display
+// .row {
+//     @include flex-display();
+// }
+@mixin grid-display {
+    display: grid;
+}
